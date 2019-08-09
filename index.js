@@ -7,7 +7,7 @@
 
 /**
  * @function isInt
- * @description determine if provided value is an a round number
+ * @description determine if provided value is a round number
  * @param {?} a 
  * @return {bool} whether or not provided value is a round number
  */
@@ -25,11 +25,11 @@ function isInt(a) {
 const multiply = function(a, b) {
     // reject non integers
     if(isInt(a) || isInt(b)) {
-        throw new Error("Please provide only integers to function:multiply");
+        throw new Error("Please provide only round numbers to function:multiply");
     }
 
     let product = 0;
-    let i = 0; // keep track of iterations during computation
+    let i = 0; // keep track of iterations during computation, in order to properly bitshift
     while(b > 0) {
         if (b % 2 == 1) {
             // bitshift a and add to result.

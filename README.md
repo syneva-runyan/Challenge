@@ -1,1 +1,1 @@
-A simple module that can be used to multiple two round numbers
+A simple module that can be used to multiple two round numbers with javascript
