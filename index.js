@@ -12,7 +12,7 @@
  * @return {bool} whether or not provided value is a round number
  */
 function isInt(a) {
-    return Number.isNaN(parseInt(a)) && a % 1 === 0;
+    return !Number.isNaN(parseInt(a)) && a % 1 === 0;
 }
 
 /**
@@ -24,7 +24,7 @@ function isInt(a) {
  */
 const multiply = function(a, b) {
     // reject non integers
-    if(isInt(a) || isInt(b)) {
+    if(!isInt(a) || !isInt(b)) {
         throw new Error("Please provide only round numbers to function:multiply");
     }
 

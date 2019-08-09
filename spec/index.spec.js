@@ -10,11 +10,19 @@ describe('multiply', function() {
     });
     it('should reject invalid argument types', function() {
         expect(function() {
-           multiply('a', 'b');
-        }).toThrow("Please provide only round numbers to function:multiply");
+           multiply('a', 5);
+        }).toThrow(new Error("Please provide only round numbers to function:multiply"));
 
         expect(function() {
-            multiply(true, NaN);
-         }).toThrow("Please provide only round numbers to function:multiply");
+            multiply(1, NaN);
+        }).toThrow(new Error("Please provide only round numbers to function:multiply"));
+
+        expect(function() {
+            multiply(1.1, 5);
+        }).toThrow(new Error("Please provide only round numbers to function:multiply"));
+
+        expect(function() {
+            multiply(true, 5);
+        }).toThrow(new Error("Please provide only round numbers to function:multiply"));
     });
 })
