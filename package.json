@@ -1,0 +1,14 @@
+{
+  "name": "challenge",
+  "version": "1.0.0",
+  "description": "The Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "Syneva Runyan",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^3.4.0"
+  }
+}
